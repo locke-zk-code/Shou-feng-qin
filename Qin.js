@@ -104,7 +104,7 @@ export default function (obj) {
   // 获取所有列表项
   lists = rootContainer.childNodes;
 
-  // 为列表项添加鼠标移入事件
+  // 为列表项添加鼠标移入、移出、点击事件
   lists.forEach(function (value, index) {
     value.addEventListener('mouseenter', function () {
       let isRight = this.dataset.isRight;
@@ -143,6 +143,10 @@ export default function (obj) {
     value.addEventListener('mouseleave', function () {
       // 启用定时器
       timer = setInterval(autoPlay, obj.time);
+    })
+
+    value.addEventListener('click', function () {
+      window.location.href = obj.urls[index];
     })
   });
 
