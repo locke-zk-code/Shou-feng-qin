@@ -164,8 +164,6 @@ export default function (obj) {
 
         lists[i].dataset.isRight = 'false';
       }
-
-      currentImageIndex = timerIndex;
     }
 
     lists[timerIndex].style.left = timerIndex * parseInt(obj.minWidth) + 'px';
